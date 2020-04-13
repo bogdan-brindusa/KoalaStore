@@ -31,10 +31,10 @@
                 </div>
 
                 <a href="#">
-                    <img src="#" id="logo" alt="Affable Bean logo">
+                    <img src="#" id="logo" alt="Koala Store logo">
                 </a>
 
-                <img src="#" id="logoText" alt="the affable bean">
+                <img src="#" id="logoText" alt="the koala store">
             </div>
 
             <div id="centerColumn">
