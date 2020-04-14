@@ -4,39 +4,6 @@
     Author     : Bogdan
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css" href="css/koalastore.css">
-        <title>The Koala Store</title>
-    </head>
-    
-    <body>
-        <div id="main">
-            <div id="header">
-                <div id="widgetBar">
-
-                    <div class="headerWidget">
-                        [ language toggle ]
-                    </div>
-
-                    <div class="headerWidget"></div>
-
-                    <div class="headerWidget">
-                        [ shopping cart widget ]
-                    </div>
-
-                </div>
-
-                <a href="#">
-                    <img src="#" id="logo" alt="Koala Store logo">
-                </a>
-
-                <img src="#" id="logoText" alt="the koala store">
-            </div>
-
             <div id="centerColumn">
 
                 <p>Your shopping cart contains x items.</p>
@@ -124,11 +91,3 @@
                 </table>
 
             </div>
-
-            <div id="footer">
-                <hr>
-                <p id="footerText">[ footer text ]</p>
-            </div>
-        </div>
-    </body>
-</html>
