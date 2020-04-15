@@ -20,14 +20,6 @@
         </jsp-property-group>
     </jsp-config>
     
-    <resource-ref>
-        <description>Connects to database for KoalaStore application</description>
-        <res-ref-name>jdbc/koalastore</res-ref-name>
-        <res-type>javax.sql.ConnectionPoolDataSource</res-type>
-        <res-auth>Container</res-auth>
-        <res-sharing-scope>Shareable</res-sharing-scope>
-    </resource-ref>
-    
     <context-param>
         <description>The relative path to product images</description>
         <param-name>productImagePath</param-name>

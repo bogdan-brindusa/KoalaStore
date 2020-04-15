@@ -6,10 +6,6 @@
     Author     : Bogdan
 --%>
 
-<sql:query var="categories" dataSource="jdbc/koalastore">
-    SELECT * FROM category
-</sql:query>
-
             <div id="indexLeftColumn">
                 <div id="welcomeText">
                     <p style="font-size: larger">Welcome to the online home of the Koala Store.</p>
@@ -21,7 +17,7 @@
             </div>
 
             <div id="indexRightColumn">
-                <c:forEach var="category" items="${categories.rows}">
+                <c:forEach var="category" items="${categories}">
                     <div class="categoryBox">
                         <a href="category?${category.id}">
                             <span class="categoryLabel"></span>
