@@ -12,11 +12,11 @@
 
             <div id="indexLeftColumn">
                 <div id="welcomeText">
-                    <p>[ welcome text ]</p>
-                    
-                    <!-- test to access context parameters -->
-                    categoryImagePath: ${initParam.categoryImagePath}
-                    productImagePath: ${initParam.productImagePath}
+                    <p style="font-size: larger">Welcome to the online home of the Koala Store.</p>
+
+                    <p>Enjoy browsing and learning more about our unique home delivery
+                        service bringing you fresh organic produce, dairy, meats, breads
+                        and other delicious and healthy items to your doorstep.</p>
                 </div>
             </div>
 
@@ -24,11 +24,11 @@
                 <c:forEach var="category" items="${categories.rows}">
                     <div class="categoryBox">
                         <a href="category?${category.id}">
-
+                            <span class="categoryLabel"></span>
                             <span class="categoryLabelText">${category.name}</span>
 
                             <img src="${initParam.categoryImagePath}${category.name}.jpg"
-                                 alt="${category.name}">
+                                 alt="${category.name}" class="categoryImage">
                         </a>
                     </div>
                 </c:forEach>

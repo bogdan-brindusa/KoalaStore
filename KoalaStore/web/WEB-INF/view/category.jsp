@@ -55,7 +55,7 @@
                         <tr class="${((iter.index % 2) == 0) ? 'lightBlue' : 'white'}">
                             <td>
                                 <img src="${initParam.productImagePath}${product.name}.png"
-                                    alt="${product.name}">
+                                    alt="image of ${product.name}">
                             </td>
                             <td>
                                 ${product.name}

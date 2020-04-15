@@ -5,6 +5,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="css/koalastore.css">
+        <link rel="shortcut icon" href="img/favicon.ico">
+        
         <title>The Koala Store</title>
     </head>
     <body>
@@ -26,9 +28,9 @@
 
                 </div>
 
-                <a href="#">
-                    <img src="#" id="logo" alt="Koala Store logo">
+                <a href="index.jsp">
+                    <img src="img/logo.png" id="logo" alt="Koala Store logo">
                 </a>
 
-                <img src="#" id="logoText" alt="the koala store">
+                <img src="img/logoText.png" id="logoText" alt="the koala store">
             </div>
