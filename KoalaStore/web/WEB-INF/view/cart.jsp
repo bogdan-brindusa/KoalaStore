@@ -21,7 +21,11 @@
     <div id="actionBar">
         <%-- clear cart widget --%>
         <c:if test="${!empty cart && cart.numberOfItems != 0}">
-            <a href="viewCart?clear=true" class="bubble hMargin">clear cart</a>
+            <c:url var="url" value="viewCart">
+                <c:param name="clear" value="true"/>
+            </c:url>
+
+            <a href="${url}" class="bubble hMargin">clear cart</a>
         </c:if>
 
         <%-- continue shopping widget --%>
