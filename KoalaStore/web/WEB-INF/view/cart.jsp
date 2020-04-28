@@ -42,11 +42,12 @@
             </c:choose>
         </c:set>
 
-        <a href="${value}" class="bubble hMargin">continue shopping</a>
+        <c:url var="url" value="${value}"/>
+        <a href="${url}" class="bubble hMargin">continue shopping</a>
 
         <%-- checkout widget --%>
         <c:if test="${!empty cart && cart.numberOfItems != 0}">
-            <a href="checkout" class="bubble hMargin">proceed to checkout &#x279f;</a>
+            <a href="<c:url value='checkout'/>" class="bubble hMargin">proceed to checkout &#x279f;</a>
         </c:if>
     </div>
 
@@ -82,7 +83,7 @@
             </td>
 
             <td>
-                <form action="updateCart" method="post">
+                <form action="<c:url value='updateCart'/>" method="post">
                     <input type="hidden"
                            name="productId"
                            value="${product.id}">

@@ -37,12 +37,12 @@ public class OrderedProduct implements Serializable {
     @Basic(optional = false)
     @Column(name = "quantity")
     private short quantity;
-    @JoinColumn(name = "customer_order_id", referencedColumnName = "id", insertable = false, updatable = false)
-    @ManyToOne(optional = false)
-    private CustomerOrder customerOrder;
     @JoinColumn(name = "product_id", referencedColumnName = "id", insertable = false, updatable = false)
     @ManyToOne(optional = false)
     private Product product;
+    @JoinColumn(name = "customer_order_id", referencedColumnName = "id", insertable = false, updatable = false)
+    @ManyToOne(optional = false)
+    private CustomerOrder customerOrder;
 
     public OrderedProduct() {
     }
@@ -114,7 +114,7 @@ public class OrderedProduct implements Serializable {
 
     @Override
     public String toString() {
-        return "entity.OrderedProduct[ orderedProductPK=" + orderedProductPK + " ]";
+        return "entity.OrderedProduct[orderedProductPK=" + orderedProductPK + "]";
     }
     
 }

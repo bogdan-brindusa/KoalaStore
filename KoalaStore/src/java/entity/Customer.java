@@ -63,7 +63,7 @@ public class Customer implements Serializable {
     @Basic(optional = false)
     @Column(name = "cc_number")
     private String ccNumber;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "customerId")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "customer")
     private Collection<CustomerOrder> customerOrderCollection;
 
     public Customer() {
@@ -170,7 +170,7 @@ public class Customer implements Serializable {
 
     @Override
     public String toString() {
-        return "entity.Customer[ id=" + id + " ]";
+        return "entity.Customer[id=" + id + "]";
     }
     
 }

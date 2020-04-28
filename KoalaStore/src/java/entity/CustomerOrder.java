@@ -59,11 +59,11 @@ public class CustomerOrder implements Serializable {
     @Basic(optional = false)
     @Column(name = "confirmation_number")
     private int confirmationNumber;
-    @JoinColumn(name = "customer_id", referencedColumnName = "id")
-    @ManyToOne(optional = false)
-    private Customer customerId;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "customerOrder")
     private Collection<OrderedProduct> orderedProductCollection;
+    @JoinColumn(name = "customer_id", referencedColumnName = "id")
+    @ManyToOne(optional = false)
+    private Customer customer;
 
     public CustomerOrder() {
     }
@@ -111,14 +111,6 @@ public class CustomerOrder implements Serializable {
         this.confirmationNumber = confirmationNumber;
     }
 
-    public Customer getCustomerId() {
-        return customerId;
-    }
-
-    public void setCustomerId(Customer customerId) {
-        this.customerId = customerId;
-    }
-
     @XmlTransient
     public Collection<OrderedProduct> getOrderedProductCollection() {
         return orderedProductCollection;
@@ -127,6 +119,14 @@ public class CustomerOrder implements Serializable {
     public void setOrderedProductCollection(Collection<OrderedProduct> orderedProductCollection) {
         this.orderedProductCollection = orderedProductCollection;
     }
+    
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }    
 
     @Override
     public int hashCode() {
@@ -150,7 +150,7 @@ public class CustomerOrder implements Serializable {
 
     @Override
     public String toString() {
-        return "entity.CustomerOrder[ id=" + id + " ]";
+        return "entity.CustomerOrder[id=" + id + "]";
     }
     
 }

@@ -29,4 +29,12 @@ public class CustomerOrderFacade extends AbstractFacade<CustomerOrder> {
         super(CustomerOrder.class);
     }
     
+    // overridden - refresh method called to retrieve order id from database
+    @Override
+    public CustomerOrder find(Object id) {
+        CustomerOrder order = em.find(CustomerOrder.class, id);
+        em.refresh(order);
+        return order;
+    }    
+    
 }

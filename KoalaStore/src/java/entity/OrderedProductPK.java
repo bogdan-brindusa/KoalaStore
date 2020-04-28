@@ -74,7 +74,7 @@ public class OrderedProductPK implements Serializable {
 
     @Override
     public String toString() {
-        return "entity.OrderedProductPK[ customerOrderId=" + customerOrderId + ", productId=" + productId + " ]";
+        return "entity.OrderedProductPK[customerOrderId=" + customerOrderId + ", productId=" + productId + "]";
     }
     
 }
