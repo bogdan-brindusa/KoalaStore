@@ -7,6 +7,7 @@ package session;
 
 import entity.Customer;
 import entity.CustomerOrder;
+import javax.annotation.security.RolesAllowed;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -41,6 +42,8 @@ public class CustomerOrderFacade extends AbstractFacade<CustomerOrder> {
     // manually created
     // in this implementation, there is only one order per customer
     // the data model however allows for multiple orders per customer
+    
+    @RolesAllowed("koalaStoreAdmin")
     public CustomerOrder findByCustomer(Customer customer) {
         return (CustomerOrder) em.createNamedQuery("CustomerOrder.findByCustomer").setParameter("customer", customer).getSingleResult();
     }
